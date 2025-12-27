@@ -3,15 +3,11 @@ version: "3"
 services:
  devopsdb:
    image: meghanath23/mynewrepo:dbimage
-   deploy:
-     replicas: 3  
    ports:
      - "3306:3306"
 
  application:
    image: meghanath23/mynewrepo:appimage
-   deploy:
-     replicas: 3
    ports:
      - "1111:8080"
    depends_on:
